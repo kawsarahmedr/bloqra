@@ -1,0 +1,93 @@
+/*
+ * Bloqra WooCommerce styles.
+ *
+ * Aligns classic WooCommerce markup (buttons, prices, notices, forms) with the
+ * Bloqra design tokens defined in theme.json. Loaded only on store pages.
+ */
+
+/* Buttons. */
+.woocommerce a.button,
+.woocommerce button.button,
+.woocommerce input.button,
+.woocommerce #respond input#submit,
+.woocommerce a.button.alt,
+.woocommerce button.button.alt {
+	background-color: var(--wp--preset--color--primary-500);
+	color: var(--wp--preset--color--white);
+	border-radius: var(--wp--custom--radius--small);
+	font-weight: 600;
+	padding: 0.75em 1.75em;
+	transition: background-color 0.18s ease;
+}
+
+.woocommerce a.button:hover,
+.woocommerce button.button:hover,
+.woocommerce input.button:hover,
+.woocommerce #respond input#submit:hover,
+.woocommerce a.button.alt:hover,
+.woocommerce button.button.alt:hover {
+	background-color: var(--wp--preset--color--primary-600);
+	color: var(--wp--preset--color--white);
+}
+
+/* Prices. */
+.woocommerce ul.products li.product .price,
+.woocommerce div.product p.price,
+.woocommerce div.product span.price {
+	color: var(--wp--preset--color--primary-700);
+	font-weight: 700;
+}
+
+/* Sale badge. */
+.woocommerce span.onsale {
+	background-color: var(--wp--preset--color--accent);
+	color: var(--wp--preset--color--neutral-900);
+	border-radius: var(--wp--custom--radius--pill);
+	font-weight: 600;
+	min-height: auto;
+	min-width: auto;
+	padding: 0.35em 0.9em;
+	line-height: 1.4;
+}
+
+/* Product cards. */
+.woocommerce ul.products li.product a img {
+	border-radius: var(--wp--custom--radius--medium);
+}
+
+/* Star ratings. */
+.woocommerce .star-rating span::before,
+.woocommerce p.stars a::before {
+	color: var(--wp--preset--color--primary-500);
+}
+
+/* Notices. */
+.woocommerce-message,
+.woocommerce-info {
+	border-top-color: var(--wp--preset--color--primary-500);
+}
+
+.woocommerce-message::before,
+.woocommerce-info::before {
+	color: var(--wp--preset--color--primary-500);
+}
+
+/* Form fields. */
+.woocommerce form .form-row input.input-text,
+.woocommerce form .form-row textarea,
+.woocommerce .select2-container .select2-selection {
+	border: 1px solid var(--wp--preset--color--neutral-300);
+	border-radius: var(--wp--custom--radius--small);
+	padding: 0.6em 0.8em;
+}
+
+.woocommerce form .form-row input.input-text:focus,
+.woocommerce form .form-row textarea:focus {
+	border-color: var(--wp--preset--color--primary-500);
+	outline: none;
+}
+
+/* Tabs. */
+.woocommerce div.product .woocommerce-tabs ul.tabs li.active {
+	border-bottom-color: var(--wp--preset--color--primary-500);
+}

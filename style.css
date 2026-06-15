@@ -1,0 +1,80 @@
+/*
+Theme Name:        Bloqra
+Theme URI:         https://wordpress.org/themes/bloqra/
+Description:       Bloqra is a modern, professional WordPress block theme and the free companion theme for the Bloqra Gutenberg blocks plugin. It ships with a polished, fully designed homepage, blog, about and contact layouts, plus WooCommerce support — all driven by theme.json so it looks great the moment you activate it. Built for the Site Editor (FSE) with a clean, accessible design and a vibrant violet palette.
+Author:            Bloqra
+Author URI:        https://wordpress.org/themes/bloqra/
+Version:           1.0.0
+Requires at least: 6.5
+Tested up to:      6.8
+Requires PHP:      7.4
+License:           GNU General Public License v2 or later
+License URI:       https://www.gnu.org/licenses/gpl-2.0.html
+Text Domain:       bloqra
+Tags:              blog, e-commerce, portfolio, full-site-editing, block-patterns, block-styles, custom-colors, custom-logo, custom-menu, editor-style, featured-images, threaded-comments, translation-ready, wide-blocks, sticky-post, rtl-language-support
+*/
+
+/*
+ * Most of Bloqra's styling lives in theme.json. The rules below are limited to
+ * progressive enhancements that theme.json cannot express (smooth interactions
+ * and a few layout refinements). Named block styles are registered in PHP.
+ */
+
+:root {
+	--bloqra-transition: 0.18s ease;
+}
+
+/* Smooth, consistent interaction feedback. */
+a,
+.wp-element-button,
+.wp-block-button__link,
+.wp-block-navigation-item__content,
+.wp-block-social-link {
+	transition: color var(--bloqra-transition), background-color var(--bloqra-transition),
+		border-color var(--bloqra-transition), box-shadow var(--bloqra-transition),
+		transform var(--bloqra-transition);
+}
+
+.wp-block-button__link:hover {
+	transform: translateY(-1px);
+}
+
+/* Outline button variant inherits the primary color from currentColor. */
+.wp-block-button.is-style-outline .wp-block-button__link {
+	background-color: transparent;
+	color: var(--wp--preset--color--primary-600);
+}
+
+.wp-block-button.is-style-outline .wp-block-button__link:hover {
+	background-color: var(--wp--preset--color--primary-600);
+	color: var(--wp--preset--color--white);
+}
+
+/* Cards lift slightly on hover for a tactile feel. */
+.is-style-card {
+	transition: box-shadow var(--bloqra-transition), transform var(--bloqra-transition);
+}
+
+.is-style-card:hover {
+	transform: translateY(-2px);
+}
+
+/* Keep featured images tidy when they sit inside cards. */
+.is-style-card .wp-block-post-featured-image img,
+.is-style-card img {
+	display: block;
+}
+
+/* Sticky header sits above content with a subtle translucent backdrop. */
+.bloqra-sticky-header {
+	position: sticky;
+	top: 0;
+	z-index: 100;
+	backdrop-filter: saturate(180%) blur(8px);
+}
+
+/* Accessible focus outline for keyboard users. */
+:where(a, button, input, textarea, select, .wp-block-button__link):focus-visible {
+	outline: 2px solid var(--wp--preset--color--primary-500);
+	outline-offset: 2px;
+}
