@@ -1,5 +1,5 @@
 {
-	"$schema": "https://schemas.wp.org/trunk/theme.json",
+	"$schema": "https://schemas.wp.org/wp/6.7/theme.json",
 	"version": 3,
 	"settings": {
 		"appearanceTools": true,
@@ -305,9 +305,12 @@
 	},
 	"templateParts": [
 		{ "area": "header", "name": "header", "title": "Header" },
-		{ "area": "footer", "name": "footer", "title": "Footer" }
+		{ "area": "footer", "name": "footer", "title": "Footer" },
+		{ "area": "uncategorized", "name": "sidebar", "title": "Sidebar" }
 	],
 	"customTemplates": [
-		{ "name": "page-no-title", "postTypes": [ "page" ], "title": "Page (No Title)" }
+		{ "name": "page-no-title", "postTypes": [ "page" ], "title": "Page (No Title)" },
+		{ "name": "single-with-sidebar", "postTypes": [ "post" ], "title": "Single Post (With Sidebar)" },
+		{ "name": "page-with-sidebar", "postTypes": [ "page" ], "title": "Page (With Sidebar)" }
 	]
 }

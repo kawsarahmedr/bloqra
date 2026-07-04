@@ -24,17 +24,12 @@
 
 		<!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|sm"}},"layout":{"type":"flex","flexWrap":"nowrap","verticalAlignment":"center"}} -->
 		<div class="wp-block-group">
-			<!-- wp:navigation {"overlayMenu":"mobile","layout":{"type":"flex","justifyContent":"right","flexWrap":"wrap"}} -->
-				<!-- wp:navigation-link {"label":"<?php echo esc_attr_x( 'Home', 'Navigation link label', 'bloqra' ); ?>","url":"/","kind":"custom","isTopLevelLink":true} /-->
-				<!-- wp:navigation-link {"label":"<?php echo esc_attr_x( 'Blog', 'Navigation link label', 'bloqra' ); ?>","url":"/blog","kind":"custom","isTopLevelLink":true} /-->
-				<!-- wp:navigation-link {"label":"<?php echo esc_attr_x( 'About', 'Navigation link label', 'bloqra' ); ?>","url":"/about","kind":"custom","isTopLevelLink":true} /-->
-				<!-- wp:navigation-link {"label":"<?php echo esc_attr_x( 'Contact', 'Navigation link label', 'bloqra' ); ?>","url":"/contact","kind":"custom","isTopLevelLink":true} /-->
-			<!-- /wp:navigation -->
+			<!-- wp:navigation {"overlayMenu":"mobile","overlayBackgroundColor":"white","overlayTextColor":"neutral-900","layout":{"type":"flex","justifyContent":"right","flexWrap":"wrap"}} /-->
 
 			<!-- wp:buttons -->
 			<div class="wp-block-buttons">
 				<!-- wp:button {"className":"is-style-fill"} -->
-				<div class="wp-block-button is-style-fill"><a class="wp-block-button__link wp-element-button" href="/contact"><?php echo esc_html_x( 'Get Started', 'Header button', 'bloqra' ); ?></a></div>
+				<div class="wp-block-button is-style-fill"><a class="wp-block-button__link wp-element-button" href="#"><?php echo esc_html_x( 'Get Started', 'Header button', 'bloqra' ); ?></a></div>
 				<!-- /wp:button -->
 			</div>
 			<!-- /wp:buttons -->

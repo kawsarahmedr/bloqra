@@ -28,7 +28,7 @@
 				<!-- /wp:paragraph -->
 				<!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|2-xs","margin":{"top":"var:preset|spacing|sm"}}},"layout":{"type":"flex","flexWrap":"wrap"}} -->
 				<div class="wp-block-group" style="margin-top:var(--wp--preset--spacing--sm)">
-					<!-- wp:paragraph {"className":"is-style-pill","style":{"elements":{}}} -->
+					<!-- wp:paragraph {"className":"is-style-pill"} -->
 					<p class="is-style-pill"><?php echo esc_html__( 'theme.json', 'bloqra' ); ?></p>
 					<!-- /wp:paragraph -->
 					<!-- wp:paragraph {"className":"is-style-pill"} -->
@@ -52,8 +52,8 @@
 			<!-- wp:heading -->
 			<h2 class="wp-block-heading"><?php echo esc_html__( 'A theme that gets out of your way', 'bloqra' ); ?></h2>
 			<!-- /wp:heading -->
-			<!-- wp:paragraph {"style":{"color":{"text":"#4b5563"}}} -->
-			<p class="has-text-color" style="color:#4b5563"><?php echo esc_html__( 'Bloqra embraces native WordPress blocks so you are never locked into a proprietary builder. Edit globally, reuse patterns and keep full ownership of your content.', 'bloqra' ); ?></p>
+			<!-- wp:paragraph {"textColor":"neutral-600"} -->
+			<p class="has-neutral-600-color has-text-color"><?php echo esc_html__( 'Bloqra embraces native WordPress blocks so you are never locked into a proprietary builder. Edit globally, reuse patterns and keep full ownership of your content.', 'bloqra' ); ?></p>
 			<!-- /wp:paragraph -->
 			<!-- wp:list {"className":"is-style-checklist"} -->
 			<ul class="wp-block-list is-style-checklist">
@@ -74,7 +74,7 @@
 			<!-- wp:buttons {"style":{"spacing":{"margin":{"top":"var:preset|spacing|sm"}}}} -->
 			<div class="wp-block-buttons" style="margin-top:var(--wp--preset--spacing--sm)">
 				<!-- wp:button {"className":"is-style-fill"} -->
-				<div class="wp-block-button is-style-fill"><a class="wp-block-button__link wp-element-button" href="/about"><?php echo esc_html__( 'Learn more', 'bloqra' ); ?></a></div>
+				<div class="wp-block-button is-style-fill"><a class="wp-block-button__link wp-element-button" href="#"><?php echo esc_html__( 'Learn more', 'bloqra' ); ?></a></div>
 				<!-- /wp:button -->
 			</div>
 			<!-- /wp:buttons -->

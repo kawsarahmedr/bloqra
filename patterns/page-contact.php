@@ -24,8 +24,8 @@
 		<!-- wp:heading {"textAlign":"center","level":1,"fontSize":"xxx-large"} -->
 		<h1 class="wp-block-heading has-text-align-center has-xxx-large-font-size"><?php echo esc_html__( 'Let’s talk', 'bloqra' ); ?></h1>
 		<!-- /wp:heading -->
-		<!-- wp:paragraph {"align":"center","fontSize":"large","style":{"color":{"text":"#4b5563"}}} -->
-		<p class="has-text-align-center has-text-color has-large-font-size" style="color:#4b5563"><?php echo esc_html__( 'Have a question about the theme or the Bloqra blocks plugin? Send us a message and we’ll get back to you.', 'bloqra' ); ?></p>
+		<!-- wp:paragraph {"align":"center","textColor":"neutral-600","fontSize":"large"} -->
+		<p class="has-text-align-center has-neutral-600-color has-text-color has-large-font-size"><?php echo esc_html__( 'Have a question about the theme? Send us a message and we’ll get back to you.', 'bloqra' ); ?></p>
 		<!-- /wp:paragraph -->
 	</div>
 	<!-- /wp:group -->
@@ -62,12 +62,12 @@
 						<textarea id="bloqra-message" name="bloqra-message" rows="6" required style="padding:.7rem .9rem;border:1px solid var(--wp--preset--color--neutral-300);border-radius:var(--wp--custom--radius--small);font:inherit;resize:vertical;"></textarea>
 					</p>
 					<p style="margin:0;">
-						<button type="submit" style="background:var(--wp--preset--color--primary-500);color:#fff;border:0;border-radius:var(--wp--custom--radius--small);padding:.8rem 1.9rem;font:inherit;font-weight:600;cursor:pointer;"><?php echo esc_html__( 'Send message', 'bloqra' ); ?></button>
+						<button type="submit" style="background:var(--wp--preset--color--primary-500);color:var(--wp--preset--color--white);border:0;border-radius:var(--wp--custom--radius--small);padding:.8rem 1.9rem;font:inherit;font-weight:600;cursor:pointer;"><?php echo esc_html__( 'Send message', 'bloqra' ); ?></button>
 					</p>
 				</form>
 				<!-- /wp:html -->
-				<!-- wp:paragraph {"fontSize":"small","style":{"color":{"text":"#6b7280"}}} -->
-				<p class="has-text-color has-small-font-size" style="color:#6b7280"><?php echo esc_html__( 'Tip: connect this form to your favorite forms plugin (such as Contact Form 7 or WPForms) to start receiving submissions.', 'bloqra' ); ?></p>
+				<!-- wp:paragraph {"textColor":"neutral-500","fontSize":"small"} -->
+				<p class="has-neutral-500-color has-text-color has-small-font-size"><?php echo esc_html__( 'Tip: connect this form to your favorite forms plugin (such as Contact Form 7 or WPForms) to start receiving submissions.', 'bloqra' ); ?></p>
 				<!-- /wp:paragraph -->
 			</div>
 			<!-- /wp:group -->
@@ -103,7 +103,7 @@
 				<!-- /wp:heading -->
 				<!-- wp:social-links {"iconColor":"primary-600","iconColorValue":"#4A0FD6","className":"is-style-logos-only"} -->
 				<ul class="wp-block-social-links has-icon-color is-style-logos-only">
-					<!-- wp:social-link {"url":"https://wordpress.org/plugins/bloqra/","service":"wordpress"} /-->
+					<!-- wp:social-link {"url":"https://wordpress.org","service":"wordpress"} /-->
 					<!-- wp:social-link {"url":"#","service":"x"} /-->
 					<!-- wp:social-link {"url":"#","service":"linkedin"} /-->
 				</ul>

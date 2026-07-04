@@ -16,6 +16,7 @@ defined( 'ABSPATH' ) || exit;
 add_action( 'after_setup_theme', __NAMESPACE__ . '\\setup_theme' );
 add_action( 'init', __NAMESPACE__ . '\\register_pattern_category', 9 );
 add_action( 'init', __NAMESPACE__ . '\\register_block_styles' );
+add_action( 'init', __NAMESPACE__ . '\\register_block_bindings' );
 
 /**
  * Set up theme defaults and register support for WordPress features.
@@ -32,6 +33,9 @@ function setup_theme(): void {
 
 	// Enable featured images.
 	add_theme_support( 'post-thumbnails' );
+
+	// Support the core post formats used by blog-focused themes.
+	add_theme_support( 'post-formats', array( 'aside', 'gallery', 'image', 'link', 'quote', 'status', 'video' ) );
 
 	// Default block editor and theme features.
 	add_theme_support( 'align-wide' );
@@ -70,6 +74,50 @@ function register_pattern_category(): void {
 			'description' => esc_html__( 'Curated layouts and sections from the Bloqra theme.', 'bloqra' ),
 		)
 	);
+
+	register_block_pattern_category(
+		'bloqra_post-format',
+		array(
+			'label'       => esc_html__( 'Post formats', 'bloqra' ),
+			'description' => esc_html__( 'A collection of post format patterns.', 'bloqra' ),
+		)
+	);
+}
+
+/**
+ * Register the post format block binding source.
+ *
+ * Exposes the human-readable name of a post's format (e.g. "Video") so it can
+ * be displayed via the Paragraph/Heading content binding in patterns and
+ * templates.
+ *
+ * @since 1.0.0
+ * @return void
+ */
+function register_block_bindings(): void {
+	register_block_bindings_source(
+		'bloqra/format',
+		array(
+			'label'              => esc_html_x( 'Post format name', 'Label for the block binding placeholder in the editor', 'bloqra' ),
+			'get_value_callback' => __NAMESPACE__ . '\\get_post_format_name',
+		)
+	);
+}
+
+/**
+ * Block binding callback that returns the current post's format name.
+ *
+ * @since 1.0.0
+ * @return string|null Post format name, or null when the format is standard.
+ */
+function get_post_format_name(): ?string {
+	$format = get_post_format();
+
+	if ( $format && 'standard' !== $format ) {
+		return get_post_format_string( $format );
+	}
+
+	return null;
 }
 
 /**
@@ -172,6 +220,17 @@ function register_block_styles(): void {
 					color: var(--wp--preset--color--primary-700);
 					font-size: var(--wp--preset--font-size--small);
 					font-weight: 600;
+				}
+				.is-style-pill.has-text-align-center {
+					display: block;
+					width: fit-content;
+					margin-left: auto;
+					margin-right: auto;
+				}
+				.is-style-pill.has-text-align-right {
+					display: block;
+					width: fit-content;
+					margin-left: auto;
 				}',
 		)
 	);

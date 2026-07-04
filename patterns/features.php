@@ -13,32 +13,32 @@
 
 $bloqra_features = array(
 	array(
-		'icon'  => '⚡',
+		'icon'  => 'icon-speed.svg',
 		'title' => __( 'Fast by default', 'bloqra' ),
 		'text'  => __( 'Lightweight, block-based markup with no jQuery or page-builder bloat — your pages load fast out of the box.', 'bloqra' ),
 	),
 	array(
-		'icon'  => '🎨',
+		'icon'  => 'icon-design.svg',
 		'title' => __( 'Full design control', 'bloqra' ),
 		'text'  => __( 'Colors, typography and spacing are driven by theme.json, so global changes take seconds in the Site Editor.', 'bloqra' ),
 	),
 	array(
-		'icon'  => '🧩',
+		'icon'  => 'icon-patterns.svg',
 		'title' => __( 'Pattern library', 'bloqra' ),
 		'text'  => __( 'Drop in ready-made hero, feature, pricing and testimonial sections, then make them yours.', 'bloqra' ),
 	),
 	array(
-		'icon'  => '🛒',
+		'icon'  => 'icon-shop.svg',
 		'title' => __( 'WooCommerce ready', 'bloqra' ),
 		'text'  => __( 'Shop, cart, checkout and account pages are styled to match the theme the moment you install WooCommerce.', 'bloqra' ),
 	),
 	array(
-		'icon'  => '📱',
+		'icon'  => 'icon-responsive.svg',
 		'title' => __( 'Responsive everywhere', 'bloqra' ),
 		'text'  => __( 'Fluid typography and flexible layouts keep your site looking sharp on phones, tablets and desktops.', 'bloqra' ),
 	),
 	array(
-		'icon'  => '♿',
+		'icon'  => 'icon-access.svg',
 		'title' => __( 'Accessible & ready', 'bloqra' ),
 		'text'  => __( 'Sensible focus styles, semantic markup and translation-ready strings — built for everyone.', 'bloqra' ),
 	),
@@ -54,8 +54,8 @@ $bloqra_features = array(
 		<!-- wp:heading {"textAlign":"center"} -->
 		<h2 class="wp-block-heading has-text-align-center"><?php echo esc_html__( 'Everything you need to launch a great site', 'bloqra' ); ?></h2>
 		<!-- /wp:heading -->
-		<!-- wp:paragraph {"align":"center","style":{"color":{"text":"#4b5563"}}} -->
-		<p class="has-text-align-center has-text-color" style="color:#4b5563"><?php echo esc_html__( 'A thoughtful set of building blocks that work together — from your homepage to your shop.', 'bloqra' ); ?></p>
+		<!-- wp:paragraph {"align":"center","textColor":"neutral-600"} -->
+		<p class="has-text-align-center has-neutral-600-color has-text-color"><?php echo esc_html__( 'A thoughtful set of building blocks that work together — from your homepage to your shop.', 'bloqra' ); ?></p>
 		<!-- /wp:paragraph -->
 	</div>
 	<!-- /wp:group -->
@@ -65,17 +65,17 @@ $bloqra_features = array(
 		<?php foreach ( $bloqra_features as $bloqra_feature ) : ?>
 		<!-- wp:group {"className":"is-style-card","style":{"spacing":{"blockGap":"var:preset|spacing|xs"}},"layout":{"type":"flex","orientation":"vertical"}} -->
 		<div class="wp-block-group is-style-card">
-			<!-- wp:group {"style":{"spacing":{"padding":{"top":"12px","bottom":"12px","left":"12px","right":"12px"}},"border":{"radius":"10px"}},"backgroundColor":"primary-50","layout":{"type":"flex","justifyContent":"center"}} -->
-			<div class="wp-block-group has-primary-50-background-color has-background" style="border-radius:10px;padding:12px">
-				<!-- wp:paragraph {"style":{"typography":{"fontSize":"24px","lineHeight":"1"},"spacing":{"margin":{"top":"0","bottom":"0"}}}} -->
-				<p style="margin-top:0;margin-bottom:0;font-size:24px;line-height:1"><?php echo esc_html( $bloqra_feature['icon'] ); ?></p>
-				<!-- /wp:paragraph -->
+			<!-- wp:group {"style":{"spacing":{"padding":{"top":"12px","bottom":"12px","left":"12px","right":"12px"}},"border":{"radius":"10px"}},"backgroundColor":"primary-50","layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"center"}} -->
+			<div class="wp-block-group has-primary-50-background-color has-background" style="border-radius:10px;padding-top:12px;padding-right:12px;padding-bottom:12px;padding-left:12px">
+				<!-- wp:image {"sizeSlug":"full","linkDestination":"none"} -->
+				<figure class="wp-block-image size-full"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/' . $bloqra_feature['icon'] ) ); ?>" alt=""/></figure>
+				<!-- /wp:image -->
 			</div>
 			<!-- /wp:group -->
 			<!-- wp:heading {"level":3,"fontSize":"large"} -->
 			<h3 class="wp-block-heading has-large-font-size"><?php echo esc_html( $bloqra_feature['title'] ); ?></h3>
 			<!-- /wp:heading -->
-			<!-- wp:paragraph {"style":{"typography":{"fontSize":"var:preset|font-size|medium"}}} -->
+			<!-- wp:paragraph {"fontSize":"medium"} -->
 			<p class="has-medium-font-size"><?php echo esc_html( $bloqra_feature['text'] ); ?></p>
 			<!-- /wp:paragraph -->
 		</div>

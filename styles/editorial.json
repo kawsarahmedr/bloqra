@@ -1,0 +1,24 @@
+{
+	"$schema": "https://schemas.wp.org/wp/6.7/theme.json",
+	"version": 3,
+	"title": "Editorial",
+	"settings": {
+		"custom": {
+			"body": {
+				"fontFamily": "var:preset|font-family|serif",
+				"lineHeight": "var:custom|line-height|body"
+			},
+			"heading": {
+				"fontFamily": "var:preset|font-family|serif"
+			}
+		}
+	},
+	"styles": {
+		"elements": {
+			"heading": {
+				"typography": { "letterSpacing": "normal" }
+			},
+			"h1": { "typography": { "lineHeight": "var:custom|line-height|tight" } }
+		}
+	}
+}

@@ -26,7 +26,7 @@
 			</div>
 			<!-- /wp:group -->
 			<!-- wp:post-title {"level":2,"isLink":true,"fontSize":"large"} /-->
-			<!-- wp:post-excerpt {"moreText":"Read more →","excerptLength":18} /-->
+			<!-- wp:post-excerpt {"moreText":"<?php echo esc_attr_x( 'Read more →', 'Post excerpt more link', 'bloqra' ); ?>","excerptLength":18} /-->
 		</article>
 		<!-- /wp:group -->
 	<!-- /wp:post-template -->
@@ -50,7 +50,7 @@
 			<!-- wp:paragraph {"align":"center"} -->
 			<p class="has-text-align-center"><?php echo esc_html__( 'We couldn’t find any posts. Try a different search or check back soon.', 'bloqra' ); ?></p>
 			<!-- /wp:paragraph -->
-			<!-- wp:search {"label":"Search","showLabel":false,"placeholder":"Search…","buttonText":"Search","buttonPosition":"button-inside","buttonUseIcon":true,"align":"center"} /-->
+			<!-- wp:search {"label":"<?php echo esc_attr_x( 'Search', 'Search form label', 'bloqra' ); ?>","showLabel":false,"placeholder":"<?php echo esc_attr_x( 'Search…', 'Search form placeholder', 'bloqra' ); ?>","buttonText":"<?php echo esc_attr_x( 'Search', 'Search form button', 'bloqra' ); ?>","buttonPosition":"button-inside","buttonUseIcon":true,"align":"center"} /-->
 		</div>
 		<!-- /wp:group -->
 	<!-- /wp:query-no-results -->

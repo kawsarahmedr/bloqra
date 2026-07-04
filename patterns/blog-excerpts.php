@@ -30,7 +30,7 @@
 		<!-- wp:buttons -->
 		<div class="wp-block-buttons">
 			<!-- wp:button {"className":"is-style-outline"} -->
-			<div class="wp-block-button is-style-outline"><a class="wp-block-button__link wp-element-button" href="/blog"><?php echo esc_html__( 'View all posts', 'bloqra' ); ?></a></div>
+			<div class="wp-block-button is-style-outline"><a class="wp-block-button__link wp-element-button" href="#"><?php echo esc_html__( 'View all posts', 'bloqra' ); ?></a></div>
 			<!-- /wp:button -->
 		</div>
 		<!-- /wp:buttons -->
@@ -50,7 +50,7 @@
 				</div>
 				<!-- /wp:group -->
 				<!-- wp:post-title {"level":3,"isLink":true,"fontSize":"large"} /-->
-				<!-- wp:post-excerpt {"moreText":"Read more →","excerptLength":18} /-->
+				<!-- wp:post-excerpt {"moreText":"<?php echo esc_attr_x( 'Read more →', 'Post excerpt more link', 'bloqra' ); ?>","excerptLength":18} /-->
 			</article>
 			<!-- /wp:group -->
 		<!-- /wp:post-template -->

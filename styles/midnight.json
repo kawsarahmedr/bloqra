@@ -1,0 +1,48 @@
+{
+	"$schema": "https://schemas.wp.org/wp/6.7/theme.json",
+	"version": 3,
+	"title": "Midnight",
+	"settings": {
+		"color": {
+			"palette": [
+				{ "name": "Primary", "slug": "primary", "color": "#8B5CF6" },
+				{ "name": "Primary 50", "slug": "primary-50", "color": "#2A1F66" },
+				{ "name": "Primary 100", "slug": "primary-100", "color": "#34238A" },
+				{ "name": "Primary 200", "slug": "primary-200", "color": "#4A2FB0" },
+				{ "name": "Primary 300", "slug": "primary-300", "color": "#6D4FD6" },
+				{ "name": "Primary 400", "slug": "primary-400", "color": "#8B5CF6" },
+				{ "name": "Primary 500", "slug": "primary-500", "color": "#A78BFA" },
+				{ "name": "Primary 600", "slug": "primary-600", "color": "#C4B5FD" },
+				{ "name": "Primary 700", "slug": "primary-700", "color": "#DDD6FE" },
+				{ "name": "Primary 800", "slug": "primary-800", "color": "#EDE9FE" },
+				{ "name": "Primary 900", "slug": "primary-900", "color": "#F5F3FF" },
+				{ "name": "Accent", "slug": "accent", "color": "#2DD4BF" },
+				{ "name": "Accent Soft", "slug": "accent-soft", "color": "#134E4A" },
+				{ "name": "White", "slug": "white", "color": "#0B1020" },
+				{ "name": "Neutral 50", "slug": "neutral-50", "color": "#111827" },
+				{ "name": "Neutral 100", "slug": "neutral-100", "color": "#1A2233" },
+				{ "name": "Neutral 200", "slug": "neutral-200", "color": "#2A3447" },
+				{ "name": "Neutral 300", "slug": "neutral-300", "color": "#3B4660" },
+				{ "name": "Neutral 400", "slug": "neutral-400", "color": "#6B7280" },
+				{ "name": "Neutral 500", "slug": "neutral-500", "color": "#9CA3AF" },
+				{ "name": "Neutral 600", "slug": "neutral-600", "color": "#B9C0CC" },
+				{ "name": "Neutral 700", "slug": "neutral-700", "color": "#D1D5DB" },
+				{ "name": "Neutral 800", "slug": "neutral-800", "color": "#E5E7EB" },
+				{ "name": "Neutral 900", "slug": "neutral-900", "color": "#F9FAFB" }
+			],
+			"gradients": [
+				{ "name": "Primary", "slug": "primary", "gradient": "linear-gradient(135deg, #5511F8 0%, #8B5CF6 100%)" },
+				{ "name": "Primary to Accent", "slug": "primary-accent", "gradient": "linear-gradient(135deg, #5511F8 0%, #2DD4BF 100%)" },
+				{ "name": "Primary Dark", "slug": "primary-dark", "gradient": "linear-gradient(135deg, #2C0980 0%, #5511F8 100%)" },
+				{ "name": "Soft Light", "slug": "soft-light", "gradient": "linear-gradient(180deg, #1A2233 0%, #0B1020 100%)" }
+			]
+		}
+	},
+	"styles": {
+		"blocks": {
+			"core/code": {
+				"color": { "background": "var:preset|color|neutral-100", "text": "var:preset|color|neutral-900" }
+			}
+		}
+	}
+}

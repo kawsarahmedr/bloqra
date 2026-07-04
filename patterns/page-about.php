@@ -24,8 +24,8 @@
 		<!-- wp:heading {"textAlign":"center","level":1,"fontSize":"xxx-large"} -->
 		<h1 class="wp-block-heading has-text-align-center has-xxx-large-font-size"><?php echo esc_html__( 'We believe great sites should be easy to build', 'bloqra' ); ?></h1>
 		<!-- /wp:heading -->
-		<!-- wp:paragraph {"align":"center","fontSize":"large","style":{"color":{"text":"#4b5563"}}} -->
-		<p class="has-text-align-center has-text-color has-large-font-size" style="color:#4b5563"><?php echo esc_html__( 'Bloqra started with a simple idea: give everyone the tools to design a professional WordPress site without writing code or paying for a bloated page builder.', 'bloqra' ); ?></p>
+		<!-- wp:paragraph {"align":"center","textColor":"neutral-600","fontSize":"large"} -->
+		<p class="has-text-align-center has-neutral-600-color has-text-color has-large-font-size"><?php echo esc_html__( 'Bloqra started with a simple idea: give everyone the tools to design a professional WordPress site without writing code or paying for a bloated page builder.', 'bloqra' ); ?></p>
 		<!-- /wp:paragraph -->
 	</div>
 	<!-- /wp:group -->
@@ -48,8 +48,8 @@
 			<!-- wp:paragraph {"fontSize":"large"} -->
 			<p class="has-large-font-size"><?php echo esc_html__( 'We build open, standards-based tools for the block editor. No lock-in, no proprietary formats — just clean WordPress that you fully own.', 'bloqra' ); ?></p>
 			<!-- /wp:paragraph -->
-			<!-- wp:paragraph {"style":{"color":{"text":"#4b5563"}}} -->
-			<p class="has-text-color" style="color:#4b5563"><?php echo esc_html__( 'Our theme and companion blocks plugin are free and GPL-licensed, because we think a beautiful, fast website shouldn’t be a luxury. Every pattern is crafted to be accessible, responsive and easy to make your own.', 'bloqra' ); ?></p>
+			<!-- wp:paragraph {"textColor":"neutral-600"} -->
+			<p class="has-neutral-600-color has-text-color"><?php echo esc_html__( 'Bloqra is free and GPL-licensed, because we think a beautiful, fast website shouldn’t be a luxury. Every pattern is crafted to be accessible, responsive and easy to make your own.', 'bloqra' ); ?></p>
 			<!-- /wp:paragraph -->
 		</div>
 		<!-- /wp:column -->
