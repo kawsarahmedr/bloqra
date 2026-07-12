@@ -1,0 +1,62 @@
+# Default dist ignore list
+
+# Git related files
+.git
+.github
+.gitignore
+.gitattributes
+.gitkeep
+.gitmodules
+readme.md
+README.md
+
+# Composer related files
+composer.lock
+
+# NPM related files
+npm-debug.log
+/node_modules/
+postcss.config.js
+babel.config.js
+package.json
+package-lock.json
+webpack.config.js
+yarn.lock
+.*
+
+# Test related files
+phpunit.xml
+phpunit.xml.dist
+tests
+.dist
+*.yml
+
+# PHPCS related files
+phpcs.xml
+phpcs.xml.dist
+
+# IDE related files
+.idea
+*.iml
+*.vscode
+
+# Misc files
+.*
+.*/
+*.lock
+*.log
+*.sh
+*.zip
+/bin/
+
+# OS related files
+.DS_Store
+Thumbs.db
+
+# Action related files
+.wordpress-org
+
+# Build related files
+/dist
+
+# Theme specific files

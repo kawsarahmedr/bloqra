@@ -1,15 +1,12 @@
 === Bloqra ===
-
 Contributors: beautifulplugins
 Requires at least: 6.7
 Tested up to: 7.0
 Requires PHP: 7.4
-Stable tag: 1.0.0
-License: GNU General Public License v2 or later
+License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
-Tags: blog, e-commerce, portfolio, full-site-editing, block-patterns, block-styles, style-variations, custom-colors, custom-logo, custom-menu, editor-style, featured-images, threaded-comments, translation-ready, wide-blocks, sticky-post, rtl-language-support
 
-Bloqra is a modern, professional WordPress block theme with a fully designed homepage, blog, About and Contact layouts.
+Bloqra is a modern, professional WordPress block theme designed for full site editing.
 
 == Description ==
 

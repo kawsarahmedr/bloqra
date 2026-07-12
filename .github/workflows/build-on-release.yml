@@ -1,0 +1,36 @@
+name: Build Theme ZIP on Publishing Release
+
+on:
+  release:
+    types: [published]
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v5
+
+      - name: Set theme slug
+        run: echo "THEME_SLUG=bloqra" >> $GITHUB_ENV
+
+      - name: Prepare theme for distribution
+        run: |
+          mkdir dist
+          rsync -av --exclude-from=.distignore ./ dist/${{ env.THEME_SLUG }}
+
+      - name: Create ZIP
+        run: |
+          cd dist
+          zip -r ${{ env.THEME_SLUG }}-${{ github.ref_name }}.zip ${{ env.THEME_SLUG }}
+
+      - name: Upload ZIP to Release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: dist/${{ env.THEME_SLUG }}-${{ github.ref_name }}.zip
+        env:
+          GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}
