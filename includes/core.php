@@ -9,14 +9,12 @@
  * @package Bloqra
  */
 
-namespace Bloqra\Core;
-
 defined( 'ABSPATH' ) || exit;
 
-add_action( 'after_setup_theme', __NAMESPACE__ . '\\setup_theme' );
-add_action( 'init', __NAMESPACE__ . '\\register_pattern_category', 9 );
-add_action( 'init', __NAMESPACE__ . '\\register_block_styles' );
-add_action( 'init', __NAMESPACE__ . '\\register_block_bindings' );
+add_action( 'after_setup_theme', 'bloqra_setup_theme' );
+add_action( 'init', 'bloqra_register_pattern_category', 9 );
+add_action( 'init', 'bloqra_register_block_styles' );
+add_action( 'init', 'bloqra_register_block_bindings' );
 
 /**
  * Set up theme defaults and register support for WordPress features.
@@ -24,7 +22,7 @@ add_action( 'init', __NAMESPACE__ . '\\register_block_bindings' );
  * @since 1.0.0
  * @return void
  */
-function setup_theme(): void {
+function bloqra_setup_theme(): void {
 	// Make the theme available for translation.
 	load_theme_textdomain( 'bloqra', get_template_directory() . '/languages' );
 
@@ -66,7 +64,7 @@ function setup_theme(): void {
  * @since 1.0.0
  * @return void
  */
-function register_pattern_category(): void {
+function bloqra_register_pattern_category(): void {
 	register_block_pattern_category(
 		'bloqra',
 		array(
@@ -94,12 +92,12 @@ function register_pattern_category(): void {
  * @since 1.0.0
  * @return void
  */
-function register_block_bindings(): void {
+function bloqra_register_block_bindings(): void {
 	register_block_bindings_source(
 		'bloqra/format',
 		array(
 			'label'              => esc_html_x( 'Post format name', 'Label for the block binding placeholder in the editor', 'bloqra' ),
-			'get_value_callback' => __NAMESPACE__ . '\\get_post_format_name',
+			'get_value_callback' => 'bloqra_get_post_format_name',
 		)
 	);
 }
@@ -110,7 +108,7 @@ function register_block_bindings(): void {
  * @since 1.0.0
  * @return string|null Post format name, or null when the format is standard.
  */
-function get_post_format_name(): ?string {
+function bloqra_get_post_format_name(): ?string {
 	$format = get_post_format();
 
 	if ( $format && 'standard' !== $format ) {
@@ -126,7 +124,7 @@ function get_post_format_name(): ?string {
  * @since 1.0.0
  * @return void
  */
-function register_block_styles(): void {
+function bloqra_register_block_styles(): void {
 	// Eyebrow / subheading style for paragraphs and headings.
 	$subheading_css = '
 		.is-style-subheading {

@@ -6,11 +6,9 @@
  * @package Bloqra
  */
 
-namespace Bloqra\Scripts;
-
 defined( 'ABSPATH' ) || exit;
 
-add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\\enqueue_styles' );
+add_action( 'wp_enqueue_scripts', 'bloqra_enqueue_styles' );
 
 /**
  * Enqueue the front-end stylesheet.
@@ -22,7 +20,7 @@ add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\\enqueue_styles' );
  * @since 1.0.0
  * @return void
  */
-function enqueue_styles(): void {
+function bloqra_enqueue_styles(): void {
 	$suffix = defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ? '' : '.min';
 	$handle = 'bloqra-style';
 

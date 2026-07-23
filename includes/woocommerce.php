@@ -10,12 +10,10 @@
  * @package Bloqra
  */
 
-namespace Bloqra\WooCommerce;
-
 defined( 'ABSPATH' ) || exit;
 
-add_action( 'after_setup_theme', __NAMESPACE__ . '\\setup' );
-add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\\enqueue_styles', 20 );
+add_action( 'after_setup_theme', 'bloqra_woocommerce_setup' );
+add_action( 'wp_enqueue_scripts', 'bloqra_woocommerce_enqueue_styles', 20 );
 
 /**
  * Declare WooCommerce theme support.
@@ -23,7 +21,7 @@ add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\\enqueue_styles', 20 );
  * @since 1.0.0
  * @return void
  */
-function setup(): void {
+function bloqra_woocommerce_setup(): void {
 	add_theme_support( 'woocommerce' );
 	add_theme_support( 'wc-product-gallery-zoom' );
 	add_theme_support( 'wc-product-gallery-lightbox' );
@@ -36,7 +34,7 @@ function setup(): void {
  * @since 1.0.0
  * @return void
  */
-function enqueue_styles(): void {
+function bloqra_woocommerce_enqueue_styles(): void {
 	if ( ! function_exists( 'is_woocommerce' ) ) {
 		return;
 	}

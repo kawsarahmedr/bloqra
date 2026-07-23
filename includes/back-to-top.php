@@ -10,12 +10,10 @@
  * @package Bloqra
  */
 
-namespace Bloqra\BackToTop;
-
 defined( 'ABSPATH' ) || exit;
 
-add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\\enqueue_script' );
-add_action( 'wp_footer', __NAMESPACE__ . '\\render_button' );
+add_action( 'wp_enqueue_scripts', 'bloqra_enqueue_back_to_top_script' );
+add_action( 'wp_footer', 'bloqra_render_back_to_top' );
 
 /**
  * Enqueue the back-to-top script.
@@ -23,7 +21,7 @@ add_action( 'wp_footer', __NAMESPACE__ . '\\render_button' );
  * @since 1.0.0
  * @return void
  */
-function enqueue_script(): void {
+function bloqra_enqueue_back_to_top_script(): void {
 	wp_enqueue_script(
 		'bloqra-back-to-top',
 		BLOQRA_THEME_URI . 'assets/js/back-to-top.js',
@@ -42,7 +40,7 @@ function enqueue_script(): void {
  * @since 1.0.0
  * @return void
  */
-function render_button(): void {
+function bloqra_render_back_to_top(): void {
 	?>
 	<button type="button" class="bloqra-back-to-top" aria-label="<?php echo esc_attr__( 'Back to top', 'bloqra' ); ?>">
 		<svg aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 3.5 3.2 10.3l1.4 1.4L9 7.3V17h2V7.3l4.4 4.4 1.4-1.4L10 3.5z"/></svg>
