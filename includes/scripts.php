@@ -21,15 +21,15 @@ add_action( 'wp_enqueue_scripts', 'bloqra_enqueue_styles' );
  * @return void
  */
 function bloqra_enqueue_styles(): void {
-	$suffix = defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ? '' : '.min';
-	$handle = 'bloqra-style';
+	$bloqra_suffix = defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ? '' : '.min';
+	$bloqra_handle = 'bloqra-style';
 
 	wp_enqueue_style(
-		$handle,
-		BLOQRA_THEME_URI . 'style' . $suffix . '.css',
+		$bloqra_handle,
+		BLOQRA_THEME_URI . 'style' . $bloqra_suffix . '.css',
 		array(),
 		BLOQRA_THEME_VERSION
 	);
 
-	wp_style_add_data( $handle, 'path', BLOQRA_THEME_DIR . 'style' . $suffix . '.css' );
+	wp_style_add_data( $bloqra_handle, 'path', BLOQRA_THEME_DIR . 'style' . $bloqra_suffix . '.css' );
 }

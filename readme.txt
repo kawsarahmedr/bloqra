@@ -69,5 +69,8 @@ are released under the same license as the theme (GPLv2 or later).
 
 == Changelog ==
 
+= 1.0.2 =
+* Prefixed the back-to-top script functions and remaining PHP variables with the theme prefix.
+
 = 1.0.0 =
 * Initial release.

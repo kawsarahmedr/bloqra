@@ -109,10 +109,10 @@ function bloqra_register_block_bindings(): void {
  * @return string|null Post format name, or null when the format is standard.
  */
 function bloqra_get_post_format_name(): ?string {
-	$format = get_post_format();
+	$bloqra_format = get_post_format();
 
-	if ( $format && 'standard' !== $format ) {
-		return get_post_format_string( $format );
+	if ( $bloqra_format && 'standard' !== $bloqra_format ) {
+		return get_post_format_string( $bloqra_format );
 	}
 
 	return null;
@@ -126,7 +126,7 @@ function bloqra_get_post_format_name(): ?string {
  */
 function bloqra_register_block_styles(): void {
 	// Eyebrow / subheading style for paragraphs and headings.
-	$subheading_css = '
+	$bloqra_subheading_css = '
 		.is-style-subheading {
 			text-transform: uppercase;
 			letter-spacing: 0.08em;
@@ -140,7 +140,7 @@ function bloqra_register_block_styles(): void {
 		array(
 			'name'         => 'subheading',
 			'label'        => esc_html__( 'Subheading', 'bloqra' ),
-			'inline_style' => $subheading_css,
+			'inline_style' => $bloqra_subheading_css,
 		)
 	);
 
@@ -149,7 +149,7 @@ function bloqra_register_block_styles(): void {
 		array(
 			'name'         => 'subheading',
 			'label'        => esc_html__( 'Subheading', 'bloqra' ),
-			'inline_style' => $subheading_css,
+			'inline_style' => $bloqra_subheading_css,
 		)
 	);
 

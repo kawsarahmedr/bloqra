@@ -17,15 +17,15 @@
 	var threshold = 480;
 	var ticking = false;
 
-	function update() {
+	function bloqraUpdateButton() {
 		button.classList.toggle( 'is-visible', window.scrollY > threshold );
 		ticking = false;
 	}
 
-	function onScroll() {
+	function bloqraOnScroll() {
 		if ( ! ticking ) {
 			ticking = true;
-			window.requestAnimationFrame( update );
+			window.requestAnimationFrame( bloqraUpdateButton );
 		}
 	}
 
@@ -35,6 +35,6 @@
 		window.scrollTo( { top: 0, behavior: reduceMotion ? 'auto' : 'smooth' } );
 	} );
 
-	window.addEventListener( 'scroll', onScroll, { passive: true } );
-	update();
+	window.addEventListener( 'scroll', bloqraOnScroll, { passive: true } );
+	bloqraUpdateButton();
 } )();
