@@ -13,6 +13,8 @@
  * @package Bloqra
  */
 
+/* translators: Placeholder email address shown in the Contact Page pattern. */
+$bloqra_contact_email = __( 'hello@example.com', 'bloqra' );
 ?>
 <!-- wp:group {"align":"full","gradient":"soft-light","style":{"spacing":{"padding":{"top":"var:preset|spacing|2-xl","bottom":"var:preset|spacing|2-xl"}}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignfull has-soft-light-gradient-background has-background" style="padding-top:var(--wp--preset--spacing--2-xl);padding-bottom:var(--wp--preset--spacing--2-xl)">
@@ -82,7 +84,7 @@
 				<h3 class="wp-block-heading has-large-font-size"><?php echo esc_html__( 'Email', 'bloqra' ); ?></h3>
 				<!-- /wp:heading -->
 				<!-- wp:paragraph -->
-				<p><a href="mailto:hello@example.com">hello@example.com</a></p>
+				<p><a href="<?php echo esc_url( 'mailto:' . $bloqra_contact_email ); ?>"><?php echo esc_html( $bloqra_contact_email ); ?></a></p>
 				<!-- /wp:paragraph -->
 			</div>
 			<!-- /wp:group -->

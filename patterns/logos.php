@@ -10,7 +10,6 @@
  *
  * @package Bloqra
  */
-
 ?>
 <!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|lg","bottom":"var:preset|spacing|lg"}}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignfull" style="padding-top:var(--wp--preset--spacing--lg);padding-bottom:var(--wp--preset--spacing--lg)">
@@ -21,19 +20,19 @@
 	<!-- wp:group {"align":"wide","style":{"spacing":{"blockGap":"var:preset|spacing|lg","margin":{"top":"var:preset|spacing|sm"}},"typography":{"fontSize":"var:preset|font-size|large","fontWeight":"700","letterSpacing":"-0.02em"}},"textColor":"neutral-400","layout":{"type":"flex","flexWrap":"wrap","justifyContent":"center"}} -->
 	<div class="wp-block-group alignwide has-neutral-400-color has-text-color" style="margin-top:var(--wp--preset--spacing--sm);font-size:var(--wp--preset--font-size--large);font-weight:700;letter-spacing:-0.02em">
 		<!-- wp:paragraph {"style":{"spacing":{"margin":{"top":"0","bottom":"0"}}}} -->
-		<p style="margin-top:0;margin-bottom:0">Northwind</p>
+		<p style="margin-top:0;margin-bottom:0"><?php echo esc_html__( 'Northwind', 'bloqra' ); ?></p>
 		<!-- /wp:paragraph -->
 		<!-- wp:paragraph {"style":{"spacing":{"margin":{"top":"0","bottom":"0"}}}} -->
-		<p style="margin-top:0;margin-bottom:0">Lumen</p>
+		<p style="margin-top:0;margin-bottom:0"><?php echo esc_html__( 'Lumen', 'bloqra' ); ?></p>
 		<!-- /wp:paragraph -->
 		<!-- wp:paragraph {"style":{"spacing":{"margin":{"top":"0","bottom":"0"}}}} -->
-		<p style="margin-top:0;margin-bottom:0">Quartz</p>
+		<p style="margin-top:0;margin-bottom:0"><?php echo esc_html__( 'Quartz', 'bloqra' ); ?></p>
 		<!-- /wp:paragraph -->
 		<!-- wp:paragraph {"style":{"spacing":{"margin":{"top":"0","bottom":"0"}}}} -->
-		<p style="margin-top:0;margin-bottom:0">Evergreen</p>
+		<p style="margin-top:0;margin-bottom:0"><?php echo esc_html__( 'Evergreen', 'bloqra' ); ?></p>
 		<!-- /wp:paragraph -->
 		<!-- wp:paragraph {"style":{"spacing":{"margin":{"top":"0","bottom":"0"}}}} -->
-		<p style="margin-top:0;margin-bottom:0">Helio</p>
+		<p style="margin-top:0;margin-bottom:0"><?php echo esc_html__( 'Helio', 'bloqra' ); ?></p>
 		<!-- /wp:paragraph -->
 	</div>
 	<!-- /wp:group -->
