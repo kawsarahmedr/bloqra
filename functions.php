@@ -24,3 +24,8 @@ require_once BLOQRA_THEME_INC . 'back-to-top.php';
 if ( class_exists( 'WooCommerce' ) ) {
 	require_once BLOQRA_THEME_INC . 'woocommerce.php';
 }
+
+// Theme dashboard (Appearance > Bloqra); costs the front end nothing.
+if ( is_admin() ) {
+	require_once BLOQRA_THEME_INC . 'admin.php';
+}
