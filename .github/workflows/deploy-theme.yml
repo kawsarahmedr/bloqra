@@ -45,6 +45,22 @@ jobs:
       - name: Install Subversion
         run: sudo apt-get update && sudo apt-get install -y subversion
 
+      # WordPress.org only accepts a brand new version directory. Re-committing an
+      # existing one is refused with a 403, which surfaces as the same
+      # "Access to '/!svn/me' forbidden" error as a bad credential, so check first.
+      - name: Verify the version is not already published
+        run: |
+          VERSION="${{ steps.version.outputs.version }}"
+          URL="https://themes.svn.wordpress.org/bloqra/$VERSION/"
+          CODE="$(curl -s -o /dev/null -w '%{http_code}' "$URL")"
+          if [ "$CODE" = "200" ]; then
+            echo "✗ Version $VERSION already exists at $URL"
+            echo "  WordPress.org does not allow overwriting a published version."
+            echo "  Bump the version in style.css and readme.txt, then tag again."
+            exit 1
+          fi
+          echo "ℹ︎ $VERSION is not published yet (HTTP $CODE), continuing."
+
       - name: WordPress Theme Deploy
         uses: kawsarahmedr/wordpress-theme-deploy@master
         env:
