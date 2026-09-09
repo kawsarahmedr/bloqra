@@ -1,7 +1,7 @@
 === Bloqra ===
 Contributors: beautifulplugins
 Requires at least: 6.7
-Tested up to: 7.0
+Tested up to: 7.1
 Requires PHP: 7.4
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -69,7 +69,7 @@ are released under the same license as the theme (GPLv2 or later).
 
 == Changelog ==
 
-= 1.0.4 - 2026-08-28 =
+= 1.0.4 - 2026-09-09 =
 * [New] Theme dashboard under Appearance > Bloqra with Dashboard, Useful Plugins and Changelog tabs.
 * [New] Site Editor shortcut cards and a next-steps checklist that reflects the state of your site.
 * [New] Useful Plugins tab with one-click install and activate for a curated list of free plugins.
