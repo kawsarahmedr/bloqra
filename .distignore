@@ -60,3 +60,5 @@ Thumbs.db
 /dist
 
 # Theme specific files
+TODO.md
+.claude

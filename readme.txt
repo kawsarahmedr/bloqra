@@ -69,8 +69,24 @@ are released under the same license as the theme (GPLv2 or later).
 
 == Changelog ==
 
-= 1.0.2 =
-* Prefixed the back-to-top script functions and remaining PHP variables with the theme prefix.
+= 1.0.4 - 2026-08-28 =
+* [New] Theme dashboard under Appearance > Bloqra with Dashboard, Useful Plugins and Changelog tabs.
+* [New] Site Editor shortcut cards and a next-steps checklist that reflects the state of your site.
+* [New] Useful Plugins tab with one-click install and activate for a curated list of free plugins.
+* [New] Changelog tab rendered straight from readme.txt.
+* [New] Dismissible welcome notice shown once after the theme is activated.
 
-= 1.0.0 =
+= 1.0.3 - 2026-08-12 =
+* [Fix] Corrected internationalization of the logos and contact page patterns.
+* [Fix] Replaced the theme screenshot with one at the correct dimensions.
+
+= 1.0.2 - 2026-07-31 =
+* [Improvement] Prefixed the back-to-top script functions and remaining PHP variables with the theme prefix.
+
+= 1.0.1 - 2026-07-23 =
+* [Improvement] Prefixed every PHP function name with bloqra_.
+* [Improvement] Updated the theme screenshot.
+* [Fix] Removed the accessibility-ready tag, which had not been through the accessibility review.
+
+= 1.0.0 - 2026-07-04 =
 * Initial release.
