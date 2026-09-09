@@ -69,7 +69,7 @@ $bloqra_contact_email = __( 'hello@example.com', 'bloqra' );
 				</form>
 				<!-- /wp:html -->
 				<!-- wp:paragraph {"textColor":"neutral-500","fontSize":"small"} -->
-				<p class="has-neutral-500-color has-text-color has-small-font-size"><?php echo esc_html__( 'Tip: connect this form to your favorite forms plugin (such as Contact Form 7 or WPForms) to start receiving submissions.', 'bloqra' ); ?></p>
+				<p class="has-neutral-500-color has-text-color has-small-font-size"><?php echo esc_html__( 'Tip: connect this form to your favorite forms plugin (such as Forming Forms or Contact Form 7 or WPForms) to start receiving submissions.', 'bloqra' ); ?></p>
 				<!-- /wp:paragraph -->
 			</div>
 			<!-- /wp:group -->

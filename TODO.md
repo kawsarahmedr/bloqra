@@ -226,15 +226,12 @@ authored by us, per the no-cross-promo rule):
 
 | Plugin | Why it is here |
 |--------|----------------|
-| Yoast SEO | SEO titles, meta, sitemaps, schema |
-| Contact Form 7 | Pairs with the theme's Contact page pattern |
+| Bloqra Blocks | Our own free Gutenberg blocks plugin |
+| AI Content Writer | AI-assisted content generation |
+| Sokket MCP Server | Connect Claude ChatGPT to your site for AI content generation |
+| Image Generator | AI-assisted image generation |
+| Send Emails | Email newsletter / Automation for WordPress |
 | WooCommerce | The theme already ships styled shop/product/cart templates |
-| Jetpack Boost | Critical CSS and performance for a block theme |
-| Wordfence Security | Firewall and malware scanning |
-| UpdraftPlus | Backups |
-| Redirection | 301s after a redesign |
-| Loco Translate | The theme is translation-ready; this is how you translate it |
-| Complianz / CookieYes | Cookie and privacy consent |
 
 Per-card button state machine, driven by real detection:
 

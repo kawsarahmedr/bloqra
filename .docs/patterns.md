@@ -50,7 +50,7 @@ For a landing-page look with no title at the top, switch the page to the **Page 
 template in the editor sidebar.
 
 The Contact pattern is a layout, not a working form — WordPress has no form block of its own. Add
-one with a form plugin such as Contact Form 7, which is one click away on the **Useful Plugins**
+one with a form plugin such as Forming Forms - Form Builder for Block Editor, which is one click away on the **Useful Plugins**
 tab of **Appearance → Bloqra**.
 
 ## Post formats
