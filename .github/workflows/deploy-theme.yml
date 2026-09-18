@@ -2,7 +2,7 @@ name: Deploy Theme to WordPress.org
 
 on:
   release:
-    types: [published]
+    # types: [published]
   workflow_dispatch:
     inputs:
       tag:
@@ -60,6 +60,36 @@ jobs:
             exit 1
           fi
           echo "ℹ︎ $VERSION is not published yet (HTTP $CODE), continuing."
+
+      # All themes share ONE SVN repository rooted at /, so write permission is
+      # granted per theme to the account that owns it. Probe it up front rather
+      # than discovering it after the whole tree has been copied.
+      - name: Verify SVN credentials can commit
+        env:
+          SVN_USERNAME: ${{ secrets.SVN_USERNAME }}
+          SVN_PASSWORD: ${{ secrets.SVN_PASSWORD }}
+        run: |
+          CODE="$(curl -s -o /dev/null -w '%{http_code}' \
+            -u "$SVN_USERNAME:$SVN_PASSWORD" \
+            -X POST --data 'preflight' \
+            'https://themes.svn.wordpress.org/!svn/me')"
+          case "$CODE" in
+            400|201)
+              echo "ℹ︎ SVN credentials accepted (HTTP $CODE)." ;;
+            401)
+              echo "✗ WordPress.org rejected the credentials (HTTP 401)."
+              echo "  SVN_USERNAME must be the wordpress.org username (case-sensitive),"
+              echo "  and SVN_PASSWORD the generated SVN password, not the account password."
+              exit 1 ;;
+            403)
+              echo "✗ Credentials are valid but this account cannot write (HTTP 403)."
+              echo "  Commit rights belong to the account that owns the theme on"
+              echo "  wordpress.org/themes/bloqra/, and that account must have 2FA enabled."
+              exit 1 ;;
+            *)
+              echo "✗ Unexpected response from WordPress.org SVN (HTTP $CODE)."
+              exit 1 ;;
+          esac
 
       - name: WordPress Theme Deploy
         uses: kawsarahmedr/wordpress-theme-deploy@master
