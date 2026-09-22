@@ -10,15 +10,15 @@ Bloqra is a modern, professional WordPress block theme designed for full site ed
 
 == Description ==
 
-Bloqra is a fast, modern block theme (full site editing) that looks polished the moment you activate it. It ships with a fully designed homepage — hero, feature grid, highlight, blog and call-to-action sections — plus ready-made About and Contact page patterns and styled WooCommerce support.
+Bloqra is a fast, modern block theme (full site editing) that looks polished the moment you activate it. It ships with ready-made page patterns — a complete homepage (hero, feature grid, highlight, blog and call-to-action sections) plus About and Contact — and styled WooCommerce support.
 
 Everything is driven by theme.json, so you can restyle the whole site (colors, typography, spacing) in seconds from the Site Editor. Bloqra is built entirely with core WordPress blocks — no plugins are required.
 
 Features:
 
 * Full Site Editing with the WordPress Site Editor
-* A designed homepage out of the box (previewable without setup)
-* Curated block patterns: header, footer, hero, features, highlight, blog, CTA, About and Contact
+* A complete Home Page pattern you apply to a page of your own, so Settings > Reading stays in your control
+* Curated block patterns: header, footer, hero, features, highlight, blog, CTA, and Home, About and Contact page patterns
 * Vibrant, professional violet color palette with a complete tonal scale
 * Style variations: Midnight (dark), Emerald, Sunset and an Editorial typography preset
 * Section block styles (Dark and Soft) for richer, full-width layouts
@@ -37,6 +37,7 @@ Features:
 1. In your WordPress dashboard, go to Appearance > Themes > Add New.
 2. Search for "Bloqra", then click Install and Activate.
 3. Open Appearance > Editor to customize templates, styles and patterns.
+4. To build the designed homepage, see "How do I set up the homepage?" below.
 
 == Frequently Asked Questions ==
 
@@ -45,10 +46,26 @@ Features:
 No. Bloqra is a standalone block theme built entirely with core WordPress
 blocks — everything works out of the box.
 
-= How do I edit the homepage? =
+= How do I set up the homepage? =
 
-Go to Appearance > Editor > Templates > Front Page. Every section is a block
-pattern you can edit, reorder or remove.
+Bloqra deliberately ships no Front Page template, so Settings > Reading always
+decides what your homepage shows. To use the designed homepage:
+
+1. Go to Pages > Add New and name the page (for example "Home").
+2. In the pattern chooser, pick "Home Page" — or insert it from the inserter,
+   under Patterns > Bloqra.
+3. In the sidebar under Page > Template, choose "Page (No Title)" so the
+   sections run full width with no page title above them.
+4. Publish, then go to Settings > Reading, choose "A static page" and select
+   your new page.
+
+Every section is a normal block group you can edit, reorder or remove.
+
+= I edited the Front Page template in an older version. What now? =
+
+Your edit was saved to the database, so it still overrides Settings > Reading
+after updating. To clear it, go to Appearance > Editor > Templates, open the
+"Front Page" entry and delete it. Then follow the steps above.
 
 = Does it work with WooCommerce? =
 
@@ -68,6 +85,10 @@ The SVG icons in assets/images are original works created for this theme and
 are released under the same license as the theme (GPLv2 or later).
 
 == Changelog ==
+
+= 1.0.5 - 2026-09-22 =
+* [New] Home Page pattern, so the designed homepage can be applied to a page of your own.
+* [Improvement] Removed the Front Page template. Settings > Reading now decides what the homepage shows, whether that is your latest posts or a static page of your choosing. See the FAQ if you had customized the old template.
 
 = 1.0.4 - 2026-09-09 =
 * [New] Theme dashboard under Appearance > Bloqra with Dashboard, Useful Plugins and Changelog tabs.

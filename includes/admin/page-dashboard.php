@@ -106,13 +106,13 @@ function get_shortcuts(): array {
 		),
 		array(
 			'title'       => __( 'Templates', 'bloqra' ),
-			'description' => __( 'Front page, blog, single post, archive, 404 and the sidebar variants.', 'bloqra' ),
+			'description' => __( 'Blog, single post, page, archive, 404 and the sidebar variants.', 'bloqra' ),
 			'url'         => site_editor_url( array( 'postType' => 'wp_template' ) ),
 			'link_text'   => __( 'Edit templates', 'bloqra' ),
 		),
 		array(
 			'title'       => __( 'Patterns', 'bloqra' ),
-			'description' => __( 'The curated Bloqra pattern library: hero, features, highlight, CTA, About and Contact.', 'bloqra' ),
+			'description' => __( 'The curated Bloqra pattern library: hero, features, highlight, CTA and the Home, About and Contact page patterns.', 'bloqra' ),
 			'url'         => site_editor_url( array( 'postType' => 'wp_block' ) ),
 			'link_text'   => __( 'Browse patterns', 'bloqra' ),
 		),
