@@ -5,33 +5,11 @@
 > plan has been removed — the code in `includes/admin/` is the record now. What follows is
 > only what is still outstanding.
 >
-> *Trimmed 2026-09-22 against the 1.0.5 tree.*
+> *Trimmed 2026-09-23 against the 1.0.5 tree; the Starter Templates tab shipped once its plugin was published.*
 
 ---
 
-## 1. Starter Templates tab — built, waiting on the plugin
-
-`includes/admin/page-starter-templates.php` is complete: hero, six feature tiles reusing the
-bundled icons, and all three CTA states (`Install` / `Activate` / `Launch`) resolved through
-`get_cta()`. Nothing about the tab needs writing.
-
-**Blocked on:** the `bloqra-starter-templates` plugin is not published. Verified 2026-09-22 —
-`api.wordpress.org/plugins/info/1.0/bloqra-starter-templates.json` returns **404**, while the
-blocks plugin (`bloqra`) returns 200.
-
-> ⚠️ **The tab is enabled right now.** `'enabled' => true` for `starter-templates` in
-> `Bloqra\Admin\get_tabs()` (`includes/admin.php:80`), and the "flip when it ships" reminder
-> comment was removed alongside it, so the change reads as deliberate rather than accidental.
-> The Install button still cannot work against a 404 slug. Either publish the plugin or set
-> this back to `false` before the next release.
-
-Verify when enabling:
-
-- [ ] `PLUGIN_SLUG` and `PLUGIN_FILE` match what was actually published
-- [ ] `admin_url( 'themes.php?page=' . PLUGIN_SLUG )` is the plugin's real screen
-- [ ] All three CTA states render correctly against the live plugin
-
-## 2. Useful Plugins — optional enrichment
+## 1. Useful Plugins — optional enrichment
 
 The tab renders from a static array with no network call, which is why it is instant and works
 offline. The plan noted an optional follow-up that was never built: lazy-load each card's icon
@@ -40,7 +18,7 @@ and rating from `plugins_api()` behind a ~12-hour transient.
 Only worth doing if the cards look bare in practice. It trades the current offline guarantee for
 polish, so it is genuinely optional — not a gap.
 
-## 3. Plugin → theme cross-link (plugin-side work)
+## 2. Plugin → theme cross-link (plugin-side work)
 
 With the Bloqra blocks plugin installed there are two "Bloqra" admin destinations, and the
 top-level one is more prominent. The agreed fix lives **entirely in the plugin**: when
@@ -51,7 +29,7 @@ Recorded here only so the decision is not lost. **The theme must never link to, 
 the plugin** — the cross-link is strictly plugin → theme, which is also the direction that
 actually solves the problem. Nothing to do in this repo.
 
-## 4. Standing constraint — constant prefixes
+## 3. Standing constraint — constant prefixes
 
 Theme constants stay in the `BLOQRA_THEME_*` namespace, never bare `BLOQRA_*`. The blocks plugin
 owns `BLOQRA_VERSION`, `BLOQRA_FILE`, `BLOQRA_PATH`, `BLOQRA_URL` and `BLOQRA_ASSETS_*`; a bare
