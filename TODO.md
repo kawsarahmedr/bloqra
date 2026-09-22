@@ -15,16 +15,15 @@
 bundled icons, and all three CTA states (`Install` / `Activate` / `Launch`) resolved through
 `get_cta()`. Nothing about the tab needs writing.
 
-**What is left:** flip `'enabled' => false` to `true` for the `starter-templates` entry in
-`Bloqra\Admin\get_tabs()` (`includes/admin.php:80`) once the companion plugin is published.
+**Blocked on:** the `bloqra-starter-templates` plugin is not published. Verified 2026-09-22 —
+`api.wordpress.org/plugins/info/1.0/bloqra-starter-templates.json` returns **404**, while the
+blocks plugin (`bloqra`) returns 200.
 
-**Blocked on:** the `bloqra-starter-templates` plugin does not exist on wordpress.org yet. Until
-it does, the Install button resolves to a slug that 404s, so the tab must stay disabled.
-
-> ⚠️ **The working tree currently has this flipped to `true`** (uncommitted, along with the
-> Changelog tab's `sidebar` flag). That was not a deliberate release decision as far as this
-> file knows — verify before committing, because it exposes a tab whose primary button cannot
-> work.
+> ⚠️ **The tab is enabled right now.** `'enabled' => true` for `starter-templates` in
+> `Bloqra\Admin\get_tabs()` (`includes/admin.php:80`), and the "flip when it ships" reminder
+> comment was removed alongside it, so the change reads as deliberate rather than accidental.
+> The Install button still cannot work against a 404 slug. Either publish the plugin or set
+> this back to `false` before the next release.
 
 Verify when enabling:
 

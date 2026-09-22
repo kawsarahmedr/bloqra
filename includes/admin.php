@@ -70,15 +70,14 @@ function get_tabs(): array {
 			'capability' => 'edit_theme_options',
 			'priority'   => 30,
 			'enabled'    => true,
-			'sidebar'    => false,
+			'sidebar'    => true,
 		),
-		// Ready for the Starter Templates plugin; flip 'enabled' when it ships.
 		'starter-templates' => array(
 			'label'      => __( 'Starter Templates', 'bloqra' ),
 			'callback'   => __NAMESPACE__ . '\StarterTemplates\render',
 			'capability' => 'edit_theme_options',
 			'priority'   => 40,
-			'enabled'    => false,
+			'enabled'    => true,
 			'sidebar'    => false,
 		),
 	);
