@@ -2,9 +2,8 @@
 /**
  * Starter Templates tab.
  *
- * Built ahead of the companion plugin and registered with `enabled => false`
- * in the tab registry, so publishing the plugin is a one-flag change here
- * rather than a new feature.
+ * Promotes the Bloqra Starter Templates companion plugin from WordPress.org,
+ * with Install, Activate and Launch states resolved from the plugin's status.
  *
  * @package Bloqra
  */

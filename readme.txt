@@ -88,6 +88,7 @@ are released under the same license as the theme (GPLv2 or later).
 
 = 1.0.5 - 2026-09-22 =
 * [New] Home Page pattern, so the designed homepage can be applied to a page of your own.
+* [New] Starter Templates tab under Appearance > Bloqra, with one-click install of the free Bloqra Starter Templates plugin.
 * [Improvement] Removed the Front Page template. Settings > Reading now decides what the homepage shows, whether that is your latest posts or a static page of your choosing. See the FAQ if you had customized the old template.
 
 = 1.0.4 - 2026-09-09 =
